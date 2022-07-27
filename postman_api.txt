@@ -3,12 +3,12 @@ https://www.strava.com/api/v3/athlete - set authorization + Bearer Access token
 
 #2-Get a new access code for read all
 Insert "read_all" as activity and as profile
-https://www.strava.com/oauth/authorize?client_id=90242&response_type=code&redirect_uri=http://localhost/exchange_token&approval_prompt=force&scope=activity:read_all,read_all,profile:read_all
+https://www.strava.com/oauth/authorize?client_id=[client_id]&response_type=code&redirect_uri=http://[made_by_you]/exchange_token&approval_prompt=force&scope=activity:read_all,read_all,profile:read_all
 
 This step going to generate a new code (new_code)
 
 #3-Switch authorization code for access and refresh token
-https://www.strava.com/oauth/token?client_id=90242&client_secret=95c57adc7a471656289002bd6b4b224d50934ecc&code=new_code&grant_type=authorization_code
+https://www.strava.com/oauth/token?client_id=[client_id]&client_secret=[your_client_secret]&code=new_code&grant_type=authorization_code
 
 It have to do a post request (on postman).
 
@@ -20,5 +20,5 @@ https://www.strava.com/api/v3/athlete/activities?access_token=at
 Paste it on Postman GET to verify
 
 #5-Action to get a new access token when it pasted on postman POST
-https://www.strava.com/oauth/token?client_id=90242&client_secret=95c57adc7a471656289002bd6b4b224d50934ecc&refresh_token=425ce659ab3ef77e64b3713b04dace6b0b9e743f&grant_type=refresh_token
+https://www.strava.com/oauth/token?client_id=[client_id]&client_secret=[your_client_secret]&refresh_token=[your_refresh_token]&grant_type=refresh_token
 
