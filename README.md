@@ -5,3 +5,5 @@ After that this raw data is uploaded to S3 bucket and a lambda function act on i
 edited parquet data. 
 
 My main target was understand how get this data and build up thi ETL using cloud
+
+Strava API was boring and confusing. I made a step-by-step. But any doubts you could contact me or [wacth him](https://www.youtube.com/watch?v=sgscChKfGyg&list=PLO6KswO64zVvcRyk0G0MAzh5oKMLb6rTW&index=2).
